@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	ul {
+	 list-style-type: none;
+	}
+
+</style>
+</head>
+<body>
+<form action="#" name="search">
+	<label>아이디 <input type="text" title="아이디" id="id"></label><br>
+	<label>비밀번호 <input type="password" autocomplete="off" id="비밀번호"></label><br>
+	<input type="submit" value="검색"><br>
+	<label for="input_id">label 묶기</label>
+	<input type="text" id="input_id">
+	</form><hr>
+	<label for="class">과목선택 
+	<select id="class">
+	<optgroup label="과목 이름">
+		<option class="subject" value="영어" selected="selected">영어</option>
+		<option class="subject" value="수학">수학</option>
+		<option class="subject" value="국어">국어</option></optgroup>
+	</select></label>
+	<hr>
+	<button type="submit">
+		<img alt="전송하기" src="images/loginDel.PNG" width="100px" height="100px">
+	</button>
+	<hr>
+	<input list="variables">
+	<datalist id="variables">
+	<option value="grammer" label="grammer"></option>
+	</datalist>
+	<hr>
+	<form name="login" action="#" method="post">
+	<ul>
+		<li>
+			<label for="input_id">label 묶기</label>
+			<input type="text" id="input_id">
+		</li>
+		<li>
+			<label for="input_id">label 묶기</label>
+			<input type="text" id="input_id">
+		</li>
+		<li>
+			<input type="submit" title="검색"></li>
+	</ul>
+	</form><hr>
+	<form>
+		<h3>수강분야 (다중 선택 가능 checkbox )</h3>
+		<ul>
+		<li>
+		<label><input type="checkbox" value="영어" checked="checked">영어</label></li>
+		<li>
+		<label for="math">수학</label>
+		<input type="checkbox" value="수학" id="math"></li>
+		<li><input type="checkbox" value="국어">국어</li>
+		</ul>
+		<fieldset>
+		<legend>수강분야 (하나만 선택 가능)</legend>
+		<ul>
+			<li><input type="radio" name="subject" value="영어">영어</li>
+			<li><input type="radio" name="subject" value="수학">수학</li>
+			<li><input type="radio" name="subject" value="국어">국어</li>
+		</ul>
+		</fieldset>
+		<ul>
+		<li>
+		<label>date 타입 <input type="date"></label></li>
+		<li><label>number 타입 <input type="number" value="0" min="0" max="20"></label></li>
+		<li><label>datetime-local 타입 <input type="datetime-local"></label></li>
+		<li><label>range 타입 <input type="range" value="1" min="0" max="10"></label>
+		<li><label>week 타입 <input type="week"></label>
+		<input type="hidden" name="HHJ" value="HHJ">
+		<li><input type="text" maxlength="50" placeholder="입력해주세요" ></li>
+		<li><label> url 타입은 반드시 http:// 로 시작해야한다
+		<input type="url" 
+		>
+		</label> </li>
+		<li><label>자체적으로 @ 를 검사주는 email 타입
+		<input type="email" value="HHJ@naver.com" readonly="readonly">
+		</label></li>
+		<li><label>입력 내용을 전화번호 숫자로 인식하는 tel 타입 <input type="tel" size="1" maxlength="4">
+		</label></li>
+		<li><label> color 의 cmyk 값을 전달하는 color 타입 
+		<input type="color">
+		</label></li>
+		<li><input type="image" src="images/loginDel.PNG" width="200px" height="200px"></li>
+		<li>시작 시간 <label><input type="time"></label></li>
+		</ul>
+		<div>
+		<label>초기화 하는 reset 타입 <input type="reset"></label></div>
+	</form>
+	
+	<form>
+		<fieldset>
+			<legend>폼 입니다!</legend>
+			<ul>
+				<li><label>dd <input type="text"></label>
+			</ul>
+		</fieldset>
+	</form><hr>
+	<form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+		<input id="num1" type="number" min="0"> +
+		<input id="num2" type="number" min="0"> =
+		<output name="result" for="num"></output>
+	</form><hr>
+	<label>진행사항 </label>
+	<progress max="100" value="60"></progress>
+	<label>차지 용량</label>
+	<meter value="0.7"></meter>
+</body>
+</html>

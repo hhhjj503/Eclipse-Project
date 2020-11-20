@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+
+	.dd:hover {
+	transform-style: preserve-3d;
+	transform-origin:left top; 
+	transform: rotate(15deg);
+	}
+	.box {
+		background: #B2cbd8;
+	}
+	#vis {
+		backface-visibility: visible;
+		border: 3px;
+		font: larger;
+		transition-property: border, background, rotate;
+		transition-duration: 3s,3s,5s;
+		transition-timing-function: ease-in-out;
+	}
+	#vis:hover {
+		border: 10px dotted gray;
+		background-color: #ff3567;
+		transform: rotate(20deg);
+		text-align: center;
+	}
+	
+	#key:hover {
+		animation-name: box-cg;
+		animation-duration:10s;
+		animation-direction: alternate;
+		animation-iteration-count:3;
+	}
+	@keyframes box-cg {
+		from {
+			background: #ff4367;
+			border: 8px dotted gray;
+		}
+		50% {
+			transform: rotate(50deg);
+		}
+		to {
+			background: #001134;
+			border: 1px solid blue;
+			font-style: oblique;
+			border-radius: 70%;
+		}
+	}
+</style>
+</head>
+<body>
+<img class="dd" src="images/loginDel.PNG" alt="로그인 삭제" width="300px"><hr>
+<div class="box" id="vis"><h3>BACK</h3></div>
+<div class="box" id="key"><h3>KEYFRAMES</h3></div>
+</body>
+</html>

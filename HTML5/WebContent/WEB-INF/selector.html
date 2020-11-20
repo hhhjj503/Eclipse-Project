@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	section + h4 {
+		border: 3px dotted blue;
+		background-color: blue;
+	}
+	
+	a[href*="us"] {
+		color: fuchsia;
+	}
+	
+	[class~="button"] {
+		color: green;
+	}
+	[class~="blue"] {
+		font-size: x-large;
+	}
+	:enabled { color: gray; } /* enabled 된 속성이 있다면 적용 */
+	:root { background: #ff5476; } /* 가장 최상위 태그html의 배경색 지정 */
+	
+	:not(#dd) { color: navy;} /* id="dd" 가 아닌 모든것 드 */
+	
+	h4::before {
+		content: "응가";
+	}  /* h4 태그의 내용 뒤에 응가를 추가 */
+</style>
+</head>
+<body>
+<header>
+<h3>예약방법 및 가격</h3>
+</header>
+<section id="container">
+	<h4>요안도라에 예약하려면?</h4>
+	<ul>
+	<li>
+		<ul>
+		<li>직접 통화</li>
+		<li>문자 남기기</li>
+		</ul>
+	</li>
+	</ul>
+	<h5>요금은?</h5>
+	<ul>
+		<li>3000</li>
+		<li>15000</li>
+		<li>25000</li>
+		<li>35000</li>
+	</ul>
+</section><hr>
+<section>
+	<a href="us1-us" class="button blue">속성선택자</a><br>
+	<a href="us2-us1" target="_blank" class="button blue">속성선택자</a>
+</section>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	div { border: 1px solid black; }
+	
+	#container {
+		width: 960px;
+		padding: 20px;
+		margin: 0 auto;
+	}
+	#header {
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+	#contents{
+		float: left;
+		width: 620px;
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+	#sidebar {
+		width: 220px;
+		padding: 20px;
+		margin-bottom: 20px;
+		float: right;
+	}
+	#footer {
+		clear: both;
+		padding: 20px;
+	}
+	.box1 {
+		float: left;
+		width: 100px;
+		background: #ffd800;
+		margin-right: 10px;
+		padding: 20ox;
+		position: relative;
+	}
+	.box2 {
+		float: left;
+		width: 300px;
+		background: #94ff00;
+		margin-right: 10px;
+		padding: 20ox;
+		position: relative;
+		left: -50px;
+		top: 10px;
+	}
+	.absolute {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: -10px;
+	}
+	
+	.fixed {
+		position: fixed;
+		width: 50px;
+		height: 50px;
+		top: 100px;
+		left: 100px;
+	}
+	.multi {
+		column-width: 120px;
+		column-count: 3;
+		column-gap: 60px;
+		column-rule: 2px dotted #ccc;
+		clear: both;
+		margin-top: 20px;
+		vertical-align: middle;
+	}
+</style>
+</head>
+<body>
+	<div id="container">
+	
+	<div id="header">
+		<h2>header</h2>
+		In hac habitasse platea dictumst quisque sagittis purus.
+		Pulvinar elementum integer enim neque volutpat ac.
+	</div>
+	<div id="sidebar">
+		<h2>side bar</h2>
+		<ul>
+			<li>Pulvinar elementum integer enim neque volutpat ac.</li>
+		</ul>
+	</div>
+		<div id="contents">
+			<h2>본문</h2>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
+ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo
+Pulvinar elementum integer enim neque volutpat ac.			
+		</div>
+		<div id="footer">
+			<h2>footer</h2>
+			In hac habitasse platea dictumst quisque sagittis purus.
+			Pulvinar elementum integer enim neque volutpat ac.
+		</div>
+	</div>
+	
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box1">box2
+		<div class="absolute">box3</div>
+		<div class="fixed">fixed</div>
+	</div>
+	
+	<div class="multi">
+		<p><b>In hac habitasse platea dictumst quisque sagittis purus.
+			Pulvinar elementum integer enim neque volutpat ac.</b></p>
+		<p><b>In hac habitasse platea dictumst quisque sagittis purus.
+			Pulvinar elementum integer enim neque volutpat ac.</b></p>
+		<p><b>In hac habitasse platea dictumst quisque sagittis purus.
+			Pulvinar elementum integer enim neque volutpat ac.</b></p>
+	</div>
+</body>
+</html>
