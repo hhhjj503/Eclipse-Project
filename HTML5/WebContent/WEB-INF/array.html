@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+ var line1 = ["사당","교대","방배","강남"];
+ var line2 = ["미금","정자","모란","수서"];
+ document.write(line1, "<br>");
+ document.write(typeof line1, "<br>");
+ document.write(line1.reverse(), "<br>");
+ document.write(line1.join("-"), "<br>");
+ document.write(typeof line1.join("-"), "<br>");
+ document.write(line1.sort(),"<br>");
+ document.write(line1.slice(0,1),"<br><br>");
+ document.write(line1.splice(0,2,"강남2","강남3"), "<br>");
+ document.write(line1, "<br>");
+ document.write(line1.concat(line2),"<br>");
+ document.write(line2.concat(line1),"<br>");
+ line1.pop();
+ line1.push("HHJ")
+ document.write(line1,"<br>");
+ line1.shift();
+line1.shift();
+ document.write(line1,"<br><hr>");
+ 
+ var str = "Hello Thank you good Luck!!"
+ document.write("10번째 인텍스인 글자 : ", str.charAt(10),"<br>");
+ document.write("Th 가 처음나오는 인덱스 : ",str.indexOf("Th"),"<br>");
+ document.write("왼쪽부터 최초로 발견된 good 의 인덱스 : ",str.indexOf("good"),"<br>");
+ document.write(str.lastIndexOf("good"),"<br>");
+ document.write(str.match("you"),"<br>");
+ document.write(str.search("you"),"<br>");
+ document.write(str.substr(10,4),"<br>");
+ document.write("문자 good 을 Good 으로 변경 : ",str.replace("good","Good"),"<br>");
+ document.write(str,"<br>");
+ document.write(str.length,"<br>");
+ document.write("12번째 인덱스의 아스키코드 값 : ",str.charCodeAt(12),"<br>");
+ var str2 = str.split(" ");
+ document.write("공백 문자를 기준으로 split(' ') 실행 후 나온 배열 str2 : ",str2,"<br>");
+ document.write("str의 [0] 번째 인덱스 : ",str[0],"<br>");
+ document.write("str2의 [0] 번째 인덱스 : ",str2[0],"<br>");
+ document.write("아스키코드값이 122인 문자  String.fromCharCode(122) : ",String.fromCharCode(122),"<br>");
+document.write("str의 10번부터 14번까지 인덱스인 문자 : ",str.substring(10,14),"<br>","<hr>");
+var userName = prompt("당신의 이름은? 영문으로 입력해주세요");
+document.write(userName.toUpperCase());
+var userNum = prompt("당신의 핸드폰 번호는?");
+document.write("<br>",userNum.substring(0,userNum.length-4),"****","<br>");
+
+ </script>
+</head>
+<body>
+
+</body>
+</html>

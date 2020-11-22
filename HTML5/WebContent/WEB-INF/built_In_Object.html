@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var ob = new Object();
+	document.write(ob);
+	
+	var day = new Date();
+	var d = day.getDate();
+	document.write(d);
+	day.setDate(23);
+	document.write("<br>" +day.toLocaleString() + "<br>");
+	
+	var christmas = new Date(2020,12,25);
+	var diff = christmas - day;
+	var result = Math.ceil(diff/(1000*60*60*24));
+	document.write(result + "<br>");
+	
+	var num = Number.parseInt("12");
+	document.write(num);
+	
+	document.write("<br>0~30 사이 난수 생성 :" + Math.floor(Math.random() * 31) + "<br>");
+	
+	var t = prompt("가위, 바위, 보 중 하나를 입력하세요");
+	var tNum = null;
+	
+	//변수의 할당 데이터를 변경하는 switch 문을 만든다
+	switch(t) {
+	case "가위" : tNum = 1;
+	document.write(t);
+	break;
+	case "바위" : tNum = 2;
+	document.write(t);
+	break;
+	case "보" : tNum = 3;
+	document.write(t);
+	break;
+	default : alert("잘못작성하였습니다");
+	location.reload();
+	}
+	
+	var com = Math.floor(Math.random() * 3);
+	
+	if(tNum == com) {
+		alert("컴퓨터와 비겼습니다!");
+	} else if (tNum > com) {
+		alert("사용자 승리!");
+	} else {
+		alert("컴퓨터 승리!");	
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
