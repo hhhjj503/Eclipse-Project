@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script type="text/javascript">
+	var chNum = String(33);
+	document.write(typeof chNum,"<br/>");
+	
+	function printing(a,b) {
+		return document.write("계산 끝!");
+		document.write(a,b,"<br/>");
+	}
+	
+	printing(12,17);
+	
+	function chColor() {
+		var arrColor = ["#ff0","6c0","#fcf","#cf0","#39f"];
+		var arrNum = Math.floor(Math.random() * 4);
+		var bodyTag = document.getElementsByTagName("body")[0].style;
+		bodyTag.background=arrColor[arrNum];
+	}
+	
+</script>
+<title>Insert title here</title>
+
+</head>
+<body>
+<button onclick="chColor();">배경바꾸기</button>
+</body>
+</html>

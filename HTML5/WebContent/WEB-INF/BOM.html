@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+var i = 0;
+//var autoClock = setTimeout("document.write(i++)",1000);
+document.write("screen 객체 <br>");
+document.write("모니터 총 넓이 : ", screen.width, "<br/>");
+document.write("모니터 총 높이 : ", screen.height, "<br/>");
+document.write("작업표시줄을 제외한 모니터 넓이 (넓이는 보통 차이 없음) : ", screen.availWidth, "<br/>");
+document.write("작업표시줄을 제외한 모니터 높이 : ", screen.availHeight, "<br/>", "<hr>");
+document.write("location (브라우저의 주소창 부분) 객체 <br>");
+document.write("현재 브라우저 주소창의 url 속성 값 location.href : ", location.url, "<br>");
+document.write("url의 #에 명시된 값 : " , location.hash, "<br>");
+document.write("url 에서 hostname 의 값 : ", location.hostname, "<br>");
+document.write("url 에서 port 번호를 반환 : " , location.port, "<br>");
+document.write("url 의 protocol 반환 : ", location.protocol,"<br>");
+document.write("url 의 쿼리 요청 값 반환 (domain 뒷 부분) : ", location.search, "<br>", "<hr>");
+document.write("history 객체 <br>");
+document.write("history.back() : <br>");
+document.write("history.forward() : <br>");
+document.write("history.go(이동할 숫자만큼 페이지 앞으로, 뒤로 이동) : <br>");
+document.write("history.length 방문기록에 저장된 페이지 목록 개수 : ", history.length, "<hr>");
+document.write("navigator 객체 <br>");
+document.write("브라우저 코드 번호 appCodeName : ", navigator.appCodeName, "<br>");
+document.write("클라이언트의 현재 브라우저 이름 : ", navigator.appName,"<br>");
+document.write("현재 브라우저의 버전 : ", navigator.appVersion,"<br>");
+document.write("현재 브라우저의 사용언어 : ", navigator.language,"<br>");
+document.write("현재 브라우저의 사용엔진 이름 : ", navigator.product,"<br>");
+document.write("현재 브라우저를 실행하는 운영체에 : ", navigator.platform,"<br>");
+document.write("현재 브라우저와 운영체제의 종합 정보 : ", navigator.userAgent, "<br>", "<hr>");
+
+window.onload = function() {
+
+	 document.getElementsByTagName("p")[0].onclick= function() {
+		 alert("Hello!");
+	}
+	 
+	 var fo = document.myForm;
+	 fo.id.defaultValue="홍길동";
+	fo.onsubmit = function() {
+		 alert(fo.id.value);
+	 }
+}
+
+</script>
+</head>
+<body>
+<p>
+dsdasdas...
+</p>
+<hr>
+<form id="myForm" method="post" name="myForm">
+<fieldset>
+	<legend>회원 로그인</legend>
+	<input id="id" name="id" type="text">
+<input id="pwd" type="password">
+	<input type="submit">
+</fieldset>
+</form>
+
+</body>
+</html>

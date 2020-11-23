@@ -45,8 +45,29 @@ document.write("str의 10번부터 14번까지 인덱스인 문자 : ",str.substring(10,14),"
 var userName = prompt("당신의 이름은? 영문으로 입력해주세요");
 document.write(userName.toUpperCase());
 var userNum = prompt("당신의 핸드폰 번호는?");
-document.write("<br>",userNum.substring(0,userNum.length-4),"****","<br>");
+document.write("<br>",userNum.substring(0,userNum.length-4),"****","<br>","<hr>");
+var email = [".co.kr",".com",".net",".or.kr",".go.kr"];
+var chk = false;
+var chk2 = false;
+var userEmail = prompt("이메일을 입력해주세요");
+if(userEmail.indexOf("@") < 0) {
+	alert("이메일 주소를 올바르게 입력해주세요");
+} else {
+	chk = true;
+}
 
+for(var i = 0; i < email.length;i++) {
+	if(userEmail.indexOf(email[i]) > 0) chk2 = true;
+}
+
+if(chk&&chk2) {
+	document.write("이메일 : ",userEmail);
+}
+
+var lang ="HTML Css jquery"; 
+var reg1 = /html/i;
+document.write(reg1.test(lang),"<br>");
+document.write(reg1.exec(lang),"<br>");
  </script>
 </head>
 <body>

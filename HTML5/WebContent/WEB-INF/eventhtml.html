@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//<[!CDATA[
+var color = ["white","yellow","blue","green"];
+var i = 0;
+function chBg() {
+	if(i<color.length) {
+		i = Math.floor(Math.random() * 4);
+		
+		var bodyTag = document.body.style;
+		bodyTag.background=color[i];
+	}
+}
+function btnBg() {
+	if(i<color.length) {
+		i = Math.floor(Math.random() * 4);
+		var btnTag = document.getElementsByTagName("button")[0];
+		btnTag.style.background=color[i];
+	}
+}
+
+var reg1 = /^[가-힣]{2,5}$/;
+var reg2 = /^(010|016|011)\d{4}\d{4}$/;
+
+document.getElementById('reBtn').onclick = function(){alert('thanks');};
+subBtn.onclick=function() {
+	var user = document.sign.user.value;
+	var tel = document.sign.tel.value;
+	if(reg1.test(user)) {
+		if(reg2.test(tel)) {
+			alert('환영합니다!');
+		} else {
+			alert('전화번호를 올바로 입력해주세요');
+		}
+	} else {
+		alert("이름을 올바로 입력해주세요");
+	}
+}
+//]]>
+</script>
+</head>
+<body>
+<button id="chBtn" name="chBtn" onclick="chBg();" onfocus="btnBg();">배경 바꾸기</button>
+<form id="sign" name="sign">
+<fieldset>
+	<legend>회원가입 양식</legend>
+	<p>
+	<label>이름 : </label>
+	<input id="user" name="user" type="text">
+	</p>
+	<p>
+	<label>비밀번호 : </label>
+	<input id="tel" name="tel" type="password">
+	</p>
+	<p>
+	<input type="submit" id="subBtn" name="subBtn" value="회원가입">
+	<input type="reset" id="reBtn" name="reBtn" value="가입취소">
+	</p>
+</fieldset>
+</form>
+</body>
+</html>
