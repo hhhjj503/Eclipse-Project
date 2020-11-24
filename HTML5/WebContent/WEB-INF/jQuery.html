@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#title").css("color","green");	
+});
+
+$(function () {
+	$("#title2").css("background","red");
+});
+
+$(function() {
+	$(".col").css("background","blue");
+	$("h1").css("border","3px solid green");
+});
+$(function() {
+	$("#list").children("li").css("background","black").css("border","2px solid blue");
+	$("li ul").children().css("color","white");
+	$(".col").prev().css("color","white");
+	$("li + li").css("color","red");
+	$("#olist").siblings().css("background","green");
+	$("#olist li:first").css("background","yellow");
+	$("#olist li:last").css("background","aqua");
+	$("#olist li:even").css("background","blue");
+	$("li:last-of-type").css("color","gray");
+	$("li:nth-last-of-type(2)").css("color","pink");
+	$("#list li").slice(3).css("color","white");
+	$("#olist2 li:gt(1)").css("background","red");
+	$(":text").css("background","white");
+	$("ol:has('li')").css("border","4px dotted black");
+	$("h1").filter(".col").css("border","2px double red").end().css("border","4px dotted blue");
+	console.log($("#olist li:eq(0)").is(":visible"));
+	$("#list li:nth-child(2n)").text("2의 배수");
+	$("#list li").each(function(i, k) {  
+		$(k).text(i);
+		console.log(k);
+		console.log(i);
+	});
+	var arr = ["갑","을","병","정"];
+	$(function() {
+		$(arr).map(function(i,k) {
+			i = "나!";
+			k="1";
+			console.log(i +k);
+		});
+	});
+	$(function() {
+		//$("#title").removeAttr("title");
+		//alert($("#title").text());
+	});
+	$(function() {
+		//alert($(window).scrollTop());
+		$("<h3>응가</h3>").insertAfter("#title");
+		//$("ol").empty().remove();
+		//$("<h6>...</h6>").replaceAll("h1");
+		$("ul").wrap("<div />");
+		alert($('body').html());
+		//$("h6").replaceWith("<h1>뭔가요?</h1>");
+	});
+});
+</script>
+</head>
+<body>
+<header>
+	<h1 id="title" title="greenCol" >그린인가요?</h1>
+	<h1 id="title2">레드인가요?</h1>
+	<h1 class="col">인가요?</h1>
+	<h1 class="col">인가요?</h1>
+</header>
+<article>
+	<ul id="list">
+		<li>
+			<ul>
+				<li>목록</li>
+			</ul>
+		</li>
+		<li>목록</li>
+		<li>목록</li>
+		<li>목록</li>
+		<li>목록</li>
+	</ul>
+	<ol id="olist">
+		<li>순서목록</li>
+		<li>순서목록</li>
+		<li>순서목록</li>
+		<li>순서목록</li>
+		<li>순서목록</li>
+	</ol>
+	<ol id="olist2">
+		<li>순서목록</li>
+		<li>순서목록</li>
+		<li>순서목록</li>
+		<li>순서목록</li>
+		<li>순서목록</li>
+	</ol>
+</article>
+</body>
+</html>

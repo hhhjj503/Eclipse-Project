@@ -5,7 +5,8 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 //<[!CDATA[
-var color = ["white","yellow","blue","green"];
+	
+	var color = ["white","yellow","blue","green"];
 var i = 0;
 function chBg() {
 	if(i<color.length) {
@@ -23,11 +24,17 @@ function btnBg() {
 	}
 }
 
+window.onload= function() {
+
 var reg1 = /^[가-힣]{2,5}$/;
 var reg2 = /^(010|016|011)\d{4}\d{4}$/;
 
-document.getElementById('reBtn').onclick = function(){alert('thanks');};
-subBtn.onclick=function() {
+var reBtn = document.forms[0].reBtn;
+reBtn.onclick= function no() {
+	alert('thanks');
+}
+
+document.sign.subBtn.onclick=function() {
 	var user = document.sign.user.value;
 	var tel = document.sign.tel.value;
 	if(reg1.test(user)) {
@@ -40,6 +47,7 @@ subBtn.onclick=function() {
 		alert("이름을 올바로 입력해주세요");
 	}
 }
+	}
 //]]>
 </script>
 </head>
