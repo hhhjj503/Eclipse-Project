@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+	$("iframe").load(function() {
+		alert(" d");
+		$("#wrap").append("<p>사이트 완료</p>");
+	});
+	
+	$("#wrap").ready(function() {
+		$("#wrap").append("<p>레디완료</p>");
+	});
+	
+	$(function() {
+		$("a").click(function(e) {
+			e.preventDefault();
+		});
+		$("#bg").mouseover(function() { 
+			$("#bg").css("background","#ff34dd");
+			$(this).next().css("border","2px dashed blue");
+			alert($(this).index());
+		});
+		$("#bg").mouseout(function () {
+			$("#bg").css("background","#ff34ff");
+		});
+		$("#bg").change(function() {
+			$("#bg").text("가는거야?!");
+		});
+	});
+	
+	$(function() {
+		$("h1").on({
+		"mouseover focus":function() {
+			$(this).css("color","#ffff00");
+		},
+		"mouseout blur":function() {
+			$(this).css("color","#ff0000");
+		}
+		});
+	});
+	
+	$(function() {
+		$("h2").on("mouseover focus", function() {
+			$(this).css("color","#ffff00");
+		});
+		$(document).on("mouseout blur","h2",function() {
+			$("h2").css("color","#ffffdd");
+		});
+	});
+	
+	$(document).ready(function(){
+		$("h3").bind("mouseover focus click", function() {
+			$(this).css("background","#ffeeee");
+		});
+		
+		$("p").delegate("strong","mouseover click focus",function() {
+			$(this).css("color","#00ffff");
+		});
+		
+		$("button").click(function() {
+			$("h1").off();
+			$("h3").off();
+			$("h2").off();
+			$("p").unbind();
+		});
+	});
+	
+</script>
+</head>
+<body>
+<div id="wrap"></div>
+	<!-- <iframe src="http://www.easyspub.com/" width="300" height="200" >
+	</iframe><hr> -->
+	<a href="www.naver.com">네이버</a><hr>
+	<p id="bg" >배경색</p>
+	<p>
+	<strong>strong..</strong>
+	</p><hr>
+	<h1>zz..</h1>
+	<h2>FF...</h2>
+	<h3>GGGG...</h3>
+	<button>중단!</button>
+</body>
+</html>

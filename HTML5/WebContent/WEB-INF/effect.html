@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var hList = document.getElementsByTagName("h1");
+		
+		//숨기고 보여주는 토글
+		$("#tog").click(function() {
+			$(hList[0]).toggle("slow");
+		});
+		
+		//부드럽게 사라졌다 보여주는 토글
+		$("#fadeTog").click(function() {
+			$(hList[1]).fadeToggle("slow");
+		});
+		
+		//투명도를 설정한 대로 조절하는 토글
+		$("#fadeT").click(function() {
+			$(hList[2]).fadeTo("slow",0.5);
+		});
+		
+		$("#slide").click(function() {
+			$(hList[3]).slideToggle("slow");
+		});
+			
+		$("#anim").click(function() {
+			$(hList[4]).animate({
+				marginLeft:"250px"},3000).animate({
+					marginLeft:"0"},3000).animate({
+				marginTop:"250px"},3000).animate({
+					marginTop:"22px"},3000).dequeue();
+				});
+		
+		$("#stop").click(function() {
+			$(hList[4]).stop();
+			});
+		
+		$("#fin").click(function() {
+			$(hList[4]).finish();
+		});
+	});
+</script>
+</head>
+<body>
+<h1>ABCDEFG</h1>
+<button id="tog">hide, show</button>
+<h1>ABCDEFG</h1>
+<button id="fadeTog">fadeIn, fadeOut</button>
+<h1>ABCDEFG</h1>
+<button id="fadeT">fadeTo</button>
+<h1>ABCDEFG</h1>
+<button id="slide">slideIn, slideOut</button>
+<h1>ABCDEFG</h1>
+<button id="anim">animate</button>
+<button id="stop">stop animate</button>
+<button id="fin">finish</button>
+</body>
+</html>
