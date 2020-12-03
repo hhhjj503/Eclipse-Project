@@ -1,11 +1,13 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1599254320000
+codemix.announce.displayed=true
 codemix.dont.show.upsell.until=1606833223064
 configurationInstallLocation=/C\:/Users/HURMMING/eclipse/jee-2020-09/eclipse/
 eclipse.preferences.version=1
+elearning.dont.show.until=1607955296474
 iconcolormode=primary
-last.download.attempt.time=1606743207650
-lastConfiguration=1606750717770
+last.download.attempt.time=1607000773195
+lastConfiguration=1607009933494
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray
