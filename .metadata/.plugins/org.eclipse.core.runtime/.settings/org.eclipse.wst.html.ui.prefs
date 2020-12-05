@@ -1,6 +1,3 @@
-AbstractTextEditor.Color.Background.SystemDefault=true
-AbstractTextEditor.Color.Foreground.SystemDefault=true
-AbstractTextEditor.Color.SelectionForeground.SystemDefault=true
 commentBorder=\#C7DD0C | null | null | false | null | null
 commentText=\#C7DD0C | null | null | false | null | null
 declBoder=\#FFFFFF | null | null | null | null | null
