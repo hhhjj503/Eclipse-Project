@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<p>This is Maven Project!</p>
 </body>
 </html>
